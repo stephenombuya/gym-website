@@ -1,0 +1,925 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Logo Container Styling */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    font-family: "Sofia", sans-serif;
+    font-size: 30px;
+    margin: 0;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3)); 
+    border-radius: 8px; 
+    margin-top: 10px;
+}
+
+.logo img:hover {
+    transform: scale(1.05); 
+    filter: drop-shadow(2px 6px 10px rgba(0, 0, 0, 0.4)); 
+}
+
+nav {
+    background-color: #333; 
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center; 
+}
+
+.nav-links li {
+    margin: 0 15px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px; 
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f04e23;
+    font-family: "Sofia", sans-serif;
+}
+
+/* Active Link */
+.nav-links a.active {
+    background-color: #f04e23; 
+    color: #ffffff;
+}
+
+.cta .button {
+    padding: 0.5rem 1rem;
+    background-color: #f04e23;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta .button:hover {
+    background-color: #d14220;
+}
+
+/* Hero Section Styling */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('gyminterior.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    padding: 4rem 2rem;
+    color: #f0f0f0;
+    text-align: center;
+    position: relative;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content .button {
+    padding: 0.7rem 1.5rem;
+    background-color: #f04e23; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .button:hover {
+    background-color: #fff;
+    color: #e04520; 
+}
+
+/* About Us Section Styling */
+#about-us {
+    padding: 4rem 2rem;
+    background-color: #333;
+    color: #ddd;
+    text-align: center;
+}
+
+.about-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f04e23;
+}
+
+.about-container p {
+    font-size: 1.1rem;
+    margin: 0 auto 2rem auto;
+    max-width: 700px;
+    color: #ddd;
+}
+
+.gym-story, .team, .testimonials, .why-choose-us {
+    margin-bottom: 3rem;
+}
+
+/* Team Members Grid Layout */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.member {
+    background-color: #f04e23;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.member h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0.5rem 0;
+}
+
+.member p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Testimonials Styling */
+.testimonials blockquote {
+    font-style: italic;
+    color: #f0f0f0;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    background-color: #444;
+    border-left: 4px solid #f04e23;
+    max-width: 600px;
+}
+
+/* Why Choose Us List Styling */
+.why-choose-us ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.why-choose-us li {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* Other Sections Styling (Classes, Membership, Personal Training, Gallery, Contact Us) */
+.section {
+    padding: 4rem 2rem;
+    color: #f0f0f0;
+    background-color: #333; 
+}
+
+.section h2 {
+    color: #f04e23; 
+    margin-bottom: 1rem;
+}
+
+.section p, .section ul, .section li {
+    color: #ddd;
+}
+
+.section button {
+    background-color: #f04e23;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.section button:hover {
+    background-color: #e04520; 
+}
+
+/* Classes Section */
+.class-schedule {
+    margin: 2rem 0;
+}
+
+.class-schedule table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.class-schedule th, .class-schedule td {
+    border: 1px solid #f04e23;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.class-schedule th {
+    background-color: #444;
+    color: #fff; 
+}
+
+.class-schedule tr:nth-child(even) {
+    background-color: #555;
+}
+
+.class-descriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    background-color: #f04e23;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.class-item {
+    border: 1px solid #f04e23;
+    margin-bottom: 2rem; 
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #555;
+    transition: transform 0.3s ease;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 1rem; 
+    margin-top: 1rem;
+    justify-items: center;
+}
+
+.image-container img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.class-item:hover {
+    transform: scale(1.02); 
+}
+
+.class-item h4 {
+    color: #f04e23;
+}
+
+.class-item p {
+    color: #ffffff; 
+    font-size: 1rem; 
+}
+
+
+
+/* Membership Section styling */
+.membership-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    margin-top: 2rem;
+}
+
+.membership-plan {
+    background-color: #444; 
+    color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 1rem; 
+    flex: 1 1 30%; 
+    max-width: 300px; 
+    text-align: center; 
+}
+
+.membership-plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.membership-plan h3 {
+    color: #f04e23; 
+    margin-bottom: 0.5rem;
+}
+
+.cta-button {
+    background-color: #f04e23; 
+    color: #fff; 
+    padding: 0.7rem 1.5rem;
+    border: none; 
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.cta-button:hover {
+    background-color: #d14220; 
+}
+
+
+
+/* Personal Training Section Styling */
+
+.trainers-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    margin-top: 2rem;
+}
+
+.trainer {
+    background-color: #444; 
+    color: #fff; 
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 1rem; 
+    flex: 1 1 30%; 
+    max-width: 300px; 
+    text-align: center;
+}
+
+.trainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.trainer-img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    margin-bottom: 1rem; 
+}
+
+.trainer h3 {
+    color: #f04e23; 
+    margin-bottom: 0.5rem;
+}
+
+.cta-button {
+    background-color: #f04e23; 
+    color: #fff; 
+    padding: 0.7rem 1.5rem;
+    border: none; 
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d14220; 
+}
+
+
+/* Gallery Section Styling */
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 1rem; 
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); 
+}
+
+
+/* Contact Us Scetion Styling */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px; 
+    margin: 0 auto; 
+    padding: 2rem; 
+    background-color: #444;
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.contact-form label {
+    margin-bottom: 0.5rem; 
+    color: #f04e23; 
+}
+
+.contact-form input, 
+.contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem; 
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #f04e23;
+}
+
+.cta-button {
+    background-color: #f04e23;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d14220;
+}
+
+
+
+/* Footer Styling */
+
+.footer {
+    background-color: #333;
+    color: #f0f0f0;
+    padding: 2rem 0;
+    text-align: center; 
+}
+
+.footer-content {
+    display: flex; 
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.footer-links,
+.footer-socials {
+    flex: 1; 
+    margin: 0 1rem; 
+}
+
+.footer-links h3,
+.footer-socials h3 {
+    color: #f04e23;
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 0.5rem 0;
+}
+
+.footer-links a,
+.footer-socials a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+    color: #f04e23;
+    font-family: "Sofia", sans-serif;
+}
+
+.footer p {
+    margin-top: 1rem;
+}
+
+
+/* Modal Styling */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* Move to Top button Styling */
+
+.move-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f04e23; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+.move-to-top:hover {
+    background-color: #fff;
+    color: #f04e23;
+}
+
+/* Tablet Styles */
+@media (min-width: 600px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    /* Header */
+    header {
+        padding: 1rem;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Hero Section */
+    #hero {
+        height: 60vh;
+        padding: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* About Us Section */
+    #about-us {
+        padding: 3rem 1rem;
+    }
+
+    .about-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-container p {
+        font-size: 1rem; 
+    }
+
+    /* Team Members Grid Layout */
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    /* Testimonials */
+    .testimonials blockquote {
+        font-size: 0.9rem;
+    }
+
+    /* Other Sections */
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Membership Plans */
+    .membership-container {
+        flex-wrap: wrap;
+    }
+
+    .membership-plan {
+        flex: 1 1 45%; 
+        max-width: none; 
+    }
+
+    /* Personal Training Section */
+    .trainers-container {
+        flex-wrap: wrap; 
+    }
+
+    .trainer {
+        flex: 1 1 45%; 
+    }
+
+    /* Gallery Section */
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    }
+
+    /* Contact Form */
+    .contact-form {
+        padding: 1.5rem; 
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    /* Move to Top button */
+    .move-to-top {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+
+  /* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%; 
+        align-items: flex-start; 
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    #hero {
+        height: 60vh;
+        padding: 2rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem; 
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .about-container h2,
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .membership-container,
+    .trainers-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .membership-plan,
+    .trainer {
+        flex: 1 1 100%; 
+        max-width: 90%; 
+    }
+
+    .contact-form {
+        width: 90%;
+        padding: 1rem; 
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    }
+
+    .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .footer-links,
+    .footer-socials {
+        margin: 1rem 0; 
+    }
+
+    /* Adjust modal content */
+    .modal-content {
+        width: 90%; 
+    }
+}
+
+/* Additional styles for very small screens */
+@media (max-width: 480px) {
+    .nav-links a {
+        padding: 8px; 
+        font-size: 0.9rem; 
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem; 
+    }
+
+    .hero-content p {
+        font-size: 0.9rem; 
+    }
+
+    .member img {
+        width: 80px;
+    }
+
+    .member h4 {
+        font-size: 1rem;
+    }
+
+    .member p {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+/* Styles for Login and Signup Pages */
+.login-signup-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-signup-container h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .login-signup-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-signup-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .login-signup-container input[type="text"],
+  .login-signup-container input[type="email"],
+  .login-signup-container input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .login-signup-container button {
+    padding: 10px;
+    background-color: #f04e23;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-signup-container button:hover {
+    background-color: #d14220;
+  }
+  
+  .login-signup-container .redirect-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .login-signup-container .redirect-link a {
+    color: #d14220;
+    text-decoration: none;
+  }
+  
