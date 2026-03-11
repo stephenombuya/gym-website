@@ -103,7 +103,3 @@ Contributions are welcome! Please follow these steps:
 
 ### **License**
 This project is licensed under the GNU License. See the [LICENSE](https://github.com/stephenombuya/gym-website/blob/main/LICENSE) file for more details.
-
-
-### **TODO for tomorrow**
-Create an images folder and move all images of this website into the `images` folder.
